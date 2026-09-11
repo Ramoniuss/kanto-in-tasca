@@ -1,0 +1,27 @@
+{
+  "name": "Kanto in tasca",
+  "short_name": "Kanto in tasca",
+  "description": "Guida Pokémon Let’s Go Pikachu e Let’s Go Eevee: walkthrough di Kanto, oggetti, incontri e palestre.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3efe4",
+  "theme_color": "#f3efe4",
+  "lang": "it",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

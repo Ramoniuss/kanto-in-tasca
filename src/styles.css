@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f3efe4;
+  --color-field: #e8e2d4;
+  --color-surface: #faf7f0;
+  --color-raised: #fffdf8;
+  --color-ink: #1c1914;
+  --color-muted: #6b6458;
+  --color-subtle: #8a8276;
+  --color-line: #e4dccb;
+  --color-line-strong: #cfc5b0;
+  --color-forest: #2c5348;
+  --color-forest-fg: #f4efe4;
+  --color-forest-soft: #e4eee8;
+  --color-ok: #2f6a4a;
+
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-sans: "Figtree", "Segoe UI", system-ui, sans-serif;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+
+  --shadow-card:
+    0 0 0 1px rgba(28, 25, 20, 0.06),
+    0 1px 2px -1px rgba(28, 25, 20, 0.06),
+    0 8px 20px -12px rgba(28, 25, 20, 0.12);
+  --shadow-sheet:
+    0 0 0 1px rgba(28, 25, 20, 0.06),
+    0 24px 60px -24px rgba(28, 25, 20, 0.28);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100dvh;
+    background: var(--color-field);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    letter-spacing: -0.011em;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-forest) 22%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
